@@ -445,8 +445,8 @@
 <p>Base URLs:</p>
 
 <ul>
-<li><p><a href="https://api-mithril-x-staging.herokuapp.com">https://api-mithril-x-staging.herokuapp.com</a></p></li>
-<li><p><a href="wss://feed-mithril-x-staging.herokuapp.com">wss://feed-mithril-x-staging.herokuapp.com</a></p></li>
+<li><p><a href="https://api.mithrilx.co">https://api.mithrilx.co</a></p></li>
+<li><p><a href="wss://api.mithrilx.co/feed">wss://api.mithrilx.co/feed</a></p></li>
 </ul>
 
 <h1 id="MithrilX-Default">Default</h1>
@@ -455,12 +455,12 @@
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/indices <span class="se">\</span>
+curl -X GET https://api.mithrilx.co/v1/indices <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/indices</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api.mithrilx.co/v1/indices</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -474,7 +474,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/indices'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/indices'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'get'</span><span class="p">,</span>
 
 
@@ -495,7 +495,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/indices'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/indices'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span>
 
@@ -518,7 +518,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/indices'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api.mithrilx.co/v1/indices'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -532,7 +532,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/indices'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/indices'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -541,7 +541,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/indices"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/indices"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -933,12 +933,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/indices/<span class="o">{</span>id_or_code<span class="o">}</span> <span class="se">\</span>
+curl -X GET https://api.mithrilx.co/v1/indices/<span class="o">{</span>id_or_code<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api.mithrilx.co/v1/indices/{id_or_code}</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -952,7 +952,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/indices/{id_or_code}'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'get'</span><span class="p">,</span>
 
 
@@ -973,7 +973,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/indices/{id_or_code}'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span>
 
@@ -996,7 +996,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api.mithrilx.co/v1/indices/{id_or_code}'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -1010,7 +1010,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/indices/{id_or_code}'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -1019,7 +1019,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/indices/{id_or_code}"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -1407,12 +1407,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/indices/<span class="o">{</span>id_or_code<span class="o">}</span>/history <span class="se">\</span>
+curl -X GET https://api.mithrilx.co/v1/indices/<span class="o">{</span>id_or_code<span class="o">}</span>/history <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/history</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api.mithrilx.co/v1/indices/{id_or_code}/history</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -1426,7 +1426,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/history'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/indices/{id_or_code}/history'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'get'</span><span class="p">,</span>
 
 
@@ -1447,7 +1447,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/history'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/indices/{id_or_code}/history'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span>
 
@@ -1470,7 +1470,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/history'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api.mithrilx.co/v1/indices/{id_or_code}/history'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -1484,7 +1484,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/history'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/indices/{id_or_code}/history'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -1493,7 +1493,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/history"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/indices/{id_or_code}/history"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -1742,12 +1742,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/indices/<span class="o">{</span>id_or_code<span class="o">}</span>/modifications <span class="se">\</span>
+curl -X GET https://api.mithrilx.co/v1/indices/<span class="o">{</span>id_or_code<span class="o">}</span>/modifications <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/modifications</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api.mithrilx.co/v1/indices/{id_or_code}/modifications</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -1761,7 +1761,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/modifications'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/indices/{id_or_code}/modifications'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'get'</span><span class="p">,</span>
 
 
@@ -1782,7 +1782,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/modifications'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/indices/{id_or_code}/modifications'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span>
 
@@ -1805,7 +1805,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/modifications'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api.mithrilx.co/v1/indices/{id_or_code}/modifications'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -1819,7 +1819,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/modifications'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/indices/{id_or_code}/modifications'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -1828,7 +1828,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/modifications"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/indices/{id_or_code}/modifications"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -1990,12 +1990,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs <span class="se">\</span>
+curl -X GET https://api.mithrilx.co/v1/exchange-pairs <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api.mithrilx.co/v1/exchange-pairs</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -2009,7 +2009,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/exchange-pairs'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'get'</span><span class="p">,</span>
 
 
@@ -2030,7 +2030,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/exchange-pairs'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span>
 
@@ -2053,7 +2053,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api.mithrilx.co/v1/exchange-pairs'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -2067,7 +2067,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/exchange-pairs'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -2076,7 +2076,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/exchange-pairs"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -2403,12 +2403,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs/<span class="o">{</span>id_or_code<span class="o">}</span> <span class="se">\</span>
+curl -X GET https://api.mithrilx.co/v1/exchange-pairs/<span class="o">{</span>id_or_code<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs/{id_or_code}</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api.mithrilx.co/v1/exchange-pairs/{id_or_code}</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -2422,7 +2422,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs/{id_or_code}'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/exchange-pairs/{id_or_code}'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'get'</span><span class="p">,</span>
 
 
@@ -2443,7 +2443,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs/{id_or_code}'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/exchange-pairs/{id_or_code}'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span>
 
@@ -2466,7 +2466,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs/{id_or_code}'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api.mithrilx.co/v1/exchange-pairs/{id_or_code}'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -2480,7 +2480,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs/{id_or_code}'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/exchange-pairs/{id_or_code}'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -2489,7 +2489,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs/{id_or_code}"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/exchange-pairs/{id_or_code}"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -2756,12 +2756,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/pairs <span class="se">\</span>
+curl -X GET https://api.mithrilx.co/v1/pairs <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/pairs</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api.mithrilx.co/v1/pairs</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -2775,7 +2775,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/pairs'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/pairs'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'get'</span><span class="p">,</span>
 
 
@@ -2796,7 +2796,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/pairs'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/pairs'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span>
 
@@ -2819,7 +2819,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/pairs'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api.mithrilx.co/v1/pairs'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -2833,7 +2833,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/pairs'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/pairs'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -2842,7 +2842,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/pairs"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/pairs"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -3183,12 +3183,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/pairs/<span class="o">{</span>id_or_code<span class="o">}</span> <span class="se">\</span>
+curl -X GET https://api.mithrilx.co/v1/pairs/<span class="o">{</span>id_or_code<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api.mithrilx.co/v1/pairs/{id_or_code}</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -3202,7 +3202,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/pairs/{id_or_code}'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'get'</span><span class="p">,</span>
 
 
@@ -3223,7 +3223,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/pairs/{id_or_code}'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span>
 
@@ -3246,7 +3246,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api.mithrilx.co/v1/pairs/{id_or_code}'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -3260,7 +3260,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/pairs/{id_or_code}'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -3269,7 +3269,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/pairs/{id_or_code}"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -3522,12 +3522,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/pairs/<span class="o">{</span>id_or_code<span class="o">}</span>/history <span class="se">\</span>
+curl -X GET https://api.mithrilx.co/v1/pairs/<span class="o">{</span>id_or_code<span class="o">}</span>/history <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/history</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api.mithrilx.co/v1/pairs/{id_or_code}/history</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -3541,7 +3541,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/history'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/pairs/{id_or_code}/history'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'get'</span><span class="p">,</span>
 
 
@@ -3562,7 +3562,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/history'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/pairs/{id_or_code}/history'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span>
 
@@ -3585,7 +3585,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/history'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api.mithrilx.co/v1/pairs/{id_or_code}/history'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -3599,7 +3599,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/history'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/pairs/{id_or_code}/history'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -3608,7 +3608,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/history"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/pairs/{id_or_code}/history"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -3790,12 +3790,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/pairs/<span class="o">{</span>id_or_code<span class="o">}</span>/volume_ratio <span class="se">\</span>
+curl -X GET https://api.mithrilx.co/v1/pairs/<span class="o">{</span>id_or_code<span class="o">}</span>/volume_ratio <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/volume_ratio</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api.mithrilx.co/v1/pairs/{id_or_code}/volume_ratio</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -3809,7 +3809,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/volume_ratio'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/pairs/{id_or_code}/volume_ratio'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'get'</span><span class="p">,</span>
 
 
@@ -3830,7 +3830,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/volume_ratio'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/pairs/{id_or_code}/volume_ratio'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span>
 
@@ -3853,7 +3853,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/volume_ratio'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api.mithrilx.co/v1/pairs/{id_or_code}/volume_ratio'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -3867,7 +3867,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/volume_ratio'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/pairs/{id_or_code}/volume_ratio'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -3876,7 +3876,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/volume_ratio"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/pairs/{id_or_code}/volume_ratio"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -4027,12 +4027,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/exchanges <span class="se">\</span>
+curl -X GET https://api.mithrilx.co/v1/exchanges <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/exchanges</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api.mithrilx.co/v1/exchanges</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -4046,7 +4046,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/exchanges'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/exchanges'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'get'</span><span class="p">,</span>
 
 
@@ -4067,7 +4067,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/exchanges'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/exchanges'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span>
 
@@ -4090,7 +4090,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/exchanges'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api.mithrilx.co/v1/exchanges'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -4104,7 +4104,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/exchanges'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/exchanges'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -4113,7 +4113,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/exchanges"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/exchanges"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -4273,12 +4273,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/exchanges/<span class="o">{</span>id_or_code<span class="o">}</span> <span class="se">\</span>
+curl -X GET https://api.mithrilx.co/v1/exchanges/<span class="o">{</span>id_or_code<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/exchanges/{id_or_code}</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api.mithrilx.co/v1/exchanges/{id_or_code}</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -4292,7 +4292,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/exchanges/{id_or_code}'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/exchanges/{id_or_code}'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'get'</span><span class="p">,</span>
 
 
@@ -4313,7 +4313,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/exchanges/{id_or_code}'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/exchanges/{id_or_code}'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span>
 
@@ -4336,7 +4336,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/exchanges/{id_or_code}'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api.mithrilx.co/v1/exchanges/{id_or_code}'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -4350,7 +4350,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/exchanges/{id_or_code}'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/exchanges/{id_or_code}'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -4359,7 +4359,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/exchanges/{id_or_code}"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/exchanges/{id_or_code}"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -4522,12 +4522,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/currencies <span class="se">\</span>
+curl -X GET https://api.mithrilx.co/v1/currencies <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/currencies</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api.mithrilx.co/v1/currencies</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -4541,7 +4541,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/currencies'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/currencies'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'get'</span><span class="p">,</span>
 
 
@@ -4562,7 +4562,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/currencies'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/currencies'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span>
 
@@ -4585,7 +4585,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/currencies'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api.mithrilx.co/v1/currencies'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -4599,7 +4599,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/currencies'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/currencies'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -4608,7 +4608,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/currencies"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/currencies"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -4918,12 +4918,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/currencies/<span class="o">{</span>id_or_code<span class="o">}</span> <span class="se">\</span>
+curl -X GET https://api.mithrilx.co/v1/currencies/<span class="o">{</span>id_or_code<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api.mithrilx.co/v1/currencies/{id_or_code}</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -4937,7 +4937,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/currencies/{id_or_code}'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'get'</span><span class="p">,</span>
 
 
@@ -4958,7 +4958,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/currencies/{id_or_code}'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span>
 
@@ -4981,7 +4981,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api.mithrilx.co/v1/currencies/{id_or_code}'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -4995,7 +4995,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/currencies/{id_or_code}'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -5004,7 +5004,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/currencies/{id_or_code}"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -5244,12 +5244,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/currencies/<span class="o">{</span>id_or_code<span class="o">}</span>/volume_ratio <span class="se">\</span>
+curl -X GET https://api.mithrilx.co/v1/currencies/<span class="o">{</span>id_or_code<span class="o">}</span>/volume_ratio <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/volume_ratio</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api.mithrilx.co/v1/currencies/{id_or_code}/volume_ratio</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -5263,7 +5263,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/volume_ratio'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/currencies/{id_or_code}/volume_ratio'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'get'</span><span class="p">,</span>
 
 
@@ -5284,7 +5284,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/volume_ratio'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/currencies/{id_or_code}/volume_ratio'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span>
 
@@ -5307,7 +5307,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/volume_ratio'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api.mithrilx.co/v1/currencies/{id_or_code}/volume_ratio'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -5321,7 +5321,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/volume_ratio'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/currencies/{id_or_code}/volume_ratio'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -5330,7 +5330,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/volume_ratio"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/currencies/{id_or_code}/volume_ratio"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -5481,12 +5481,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/currencies/<span class="o">{</span>id_or_code<span class="o">}</span>/supplies <span class="se">\</span>
+curl -X GET https://api.mithrilx.co/v1/currencies/<span class="o">{</span>id_or_code<span class="o">}</span>/supplies <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/supplies</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api.mithrilx.co/v1/currencies/{id_or_code}/supplies</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -5500,7 +5500,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/supplies'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/currencies/{id_or_code}/supplies'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'get'</span><span class="p">,</span>
 
 
@@ -5521,7 +5521,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/supplies'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/currencies/{id_or_code}/supplies'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span>
 
@@ -5544,7 +5544,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/supplies'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api.mithrilx.co/v1/currencies/{id_or_code}/supplies'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -5558,7 +5558,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/supplies'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/currencies/{id_or_code}/supplies'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -5567,7 +5567,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/supplies"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/currencies/{id_or_code}/supplies"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -5711,12 +5711,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/users/current <span class="se">\</span>
+curl -X GET https://api.mithrilx.co/v1/users/current <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/users/current</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api.mithrilx.co/v1/users/current</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -5730,7 +5730,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/current'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/users/current'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'get'</span><span class="p">,</span>
 
 
@@ -5751,7 +5751,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/current'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/users/current'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span>
 
@@ -5774,7 +5774,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/current'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api.mithrilx.co/v1/users/current'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -5788,7 +5788,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/users/current'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/users/current'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -5797,7 +5797,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/users/current"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/users/current"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -5913,12 +5913,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X POST https://api-mithril-x-staging.herokuapp.com/v1/users/login <span class="se">\</span>
+curl -X POST https://api.mithrilx.co/v1/users/login <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/users/login</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">https://api.mithrilx.co/v1/users/login</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -5932,7 +5932,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/login'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/users/login'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'post'</span><span class="p">,</span>
 
 
@@ -5953,7 +5953,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/login'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/users/login'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'POST'</span><span class="p">,</span>
 
@@ -5976,7 +5976,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">post</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/login'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">post</span> <span class="s1">'https://api.mithrilx.co/v1/users/login'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -5990,7 +5990,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/users/login'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/users/login'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -5999,7 +5999,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/users/login"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/users/login"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"POST"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -6115,12 +6115,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/users/<span class="o">{</span>id_or_mail<span class="o">}</span>/subscriptions <span class="se">\</span>
+curl -X GET https://api.mithrilx.co/v1/users/<span class="o">{</span>id_or_mail<span class="o">}</span>/subscriptions <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -6134,7 +6134,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'get'</span><span class="p">,</span>
 
 
@@ -6155,7 +6155,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span>
 
@@ -6178,7 +6178,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">get</span> <span class="s1">'https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -6192,7 +6192,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -6201,7 +6201,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -6271,12 +6271,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X POST https://api-mithril-x-staging.herokuapp.com/v1/users/<span class="o">{</span>id_or_mail<span class="o">}</span>/subscriptions <span class="se">\</span>
+curl -X POST https://api.mithrilx.co/v1/users/<span class="o">{</span>id_or_mail<span class="o">}</span>/subscriptions <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -6290,7 +6290,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'post'</span><span class="p">,</span>
 
 
@@ -6311,7 +6311,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'POST'</span><span class="p">,</span>
 
@@ -6334,7 +6334,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">post</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">post</span> <span class="s1">'https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -6348,7 +6348,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -6357,7 +6357,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"POST"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -6427,12 +6427,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X DELETE https://api-mithril-x-staging.herokuapp.com/v1/users/<span class="o">{</span>id_or_mail<span class="o">}</span>/subscriptions <span class="se">\</span>
+curl -X DELETE https://api.mithrilx.co/v1/users/<span class="o">{</span>id_or_mail<span class="o">}</span>/subscriptions <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">DELETE</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">DELETE</span> <span class="nn">https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -6446,7 +6446,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'delete'</span><span class="p">,</span>
 
 
@@ -6467,7 +6467,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'DELETE'</span><span class="p">,</span>
 
@@ -6490,7 +6490,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">delete</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">delete</span> <span class="s1">'https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -6504,7 +6504,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -6513,7 +6513,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"DELETE"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -6583,12 +6583,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X POST https://api-mithril-x-staging.herokuapp.com/v1/users/feedback <span class="se">\</span>
+curl -X POST https://api.mithrilx.co/v1/users/feedback <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/users/feedback</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">https://api.mithrilx.co/v1/users/feedback</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -6602,7 +6602,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/feedback'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/users/feedback'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'post'</span><span class="p">,</span>
 
 
@@ -6623,7 +6623,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/feedback'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/users/feedback'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'POST'</span><span class="p">,</span>
 
@@ -6646,7 +6646,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">post</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/feedback'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">post</span> <span class="s1">'https://api.mithrilx.co/v1/users/feedback'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -6660,7 +6660,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/users/feedback'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/users/feedback'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -6669,7 +6669,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/users/feedback"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/users/feedback"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"POST"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
@@ -6719,12 +6719,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X POST https://api-mithril-x-staging.herokuapp.com/v1/users/<span class="o">{</span>id_or_mail<span class="o">}</span>/newsletter <span class="se">\</span>
+curl -X POST https://api.mithrilx.co/v1/users/<span class="o">{</span>id_or_mail<span class="o">}</span>/newsletter <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
 
 
-</code></pre><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/newsletter</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-mithril-x-staging.herokuapp.com</span>
+</code></pre><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">https://api.mithrilx.co/v1/users/{id_or_mail}/newsletter</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mithrilx.co</span>
 
 
 Accept: application/json
@@ -6738,7 +6738,7 @@ Accept: application/json
 
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/newsletter'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'https://api.mithrilx.co/v1/users/{id_or_mail}/newsletter'</span><span class="p">,</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'post'</span><span class="p">,</span>
 
 
@@ -6759,7 +6759,7 @@ Accept: application/json
 <span class="p">};</span>
 
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/newsletter'</span><span class="p">,</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.mithrilx.co/v1/users/{id_or_mail}/newsletter'</span><span class="p">,</span>
 <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="s1">'POST'</span><span class="p">,</span>
 
@@ -6782,7 +6782,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">post</span> <span class="s1">'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/newsletter'</span><span class="p">,</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">RestClient</span><span class="p">.</span><span class="nf">post</span> <span class="s1">'https://api.mithrilx.co/v1/users/{id_or_mail}/newsletter'</span><span class="p">,</span>
   <span class="ss">params: </span><span class="p">{</span>
   <span class="p">},</span> <span class="ss">headers: </span><span class="n">headers</span>
 
@@ -6796,7 +6796,7 @@ Accept: application/json
 <span class="p">}</span>
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/newsletter'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'https://api.mithrilx.co/v1/users/{id_or_mail}/newsletter'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
 
 
 <span class="p">},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -6805,7 +6805,7 @@ Accept: application/json
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 
-</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/newsletter"</span><span class="o">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">URL</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"https://api.mithrilx.co/v1/users/{id_or_mail}/newsletter"</span><span class="o">);</span>
 <span class="n">HttpURLConnection</span> <span class="n">con</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
 <span class="n">con</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"POST"</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">();</span>
