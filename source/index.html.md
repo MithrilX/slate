@@ -218,10 +218,10 @@ Error can occur if you send a wrong subscription for example.
 Base URLs:
 
 
-* <a href="https://api-mithril-x-staging.herokuapp.com">https://api-mithril-x-staging.herokuapp.com</a>
+* <a href="https://api.mithrilx.co">https://api.mithrilx.co</a>
 
 
-* <a href="wss://feed-mithril-x-staging.herokuapp.com">wss://feed-mithril-x-staging.herokuapp.com</a>
+* <a href="wss://api.mithrilx.co/feed">wss://api.mithrilx.co/feed</a>
 
 
 <h1 id="MithrilX-Default">Default</h1>
@@ -235,7 +235,7 @@ Base URLs:
 
 ```shell
 # You can also use wget
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/indices \
+curl -X GET https://api.mithrilx.co/v1/indices \
   -H 'Accept: application/json'
 
 
@@ -243,8 +243,8 @@ curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/indices \
 
 
 ```http
-GET https://api-mithril-x-staging.herokuapp.com/v1/indices HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+GET https://api.mithrilx.co/v1/indices HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -262,7 +262,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/indices',
+  url: 'https://api.mithrilx.co/v1/indices',
   method: 'get',
 
 
@@ -287,7 +287,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/indices',
+fetch('https://api.mithrilx.co/v1/indices',
 {
   method: 'GET',
 
@@ -314,7 +314,7 @@ headers = {
 }
 
 
-result = RestClient.get 'https://api-mithril-x-staging.herokuapp.com/v1/indices',
+result = RestClient.get 'https://api.mithrilx.co/v1/indices',
   params: {
   }, headers: headers
 
@@ -332,7 +332,7 @@ headers = {
 }
 
 
-r = requests.get('https://api-mithril-x-staging.herokuapp.com/v1/indices', params={
+r = requests.get('https://api.mithrilx.co/v1/indices', params={
 
 
 }, headers = headers)
@@ -345,7 +345,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/indices");
+URL obj = new URL("https://api.mithrilx.co/v1/indices");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -515,7 +515,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code} \
+curl -X GET https://api.mithrilx.co/v1/indices/{id_or_code} \
   -H 'Accept: application/json'
 
 
@@ -523,8 +523,8 @@ curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code} 
 
 
 ```http
-GET https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code} HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+GET https://api.mithrilx.co/v1/indices/{id_or_code} HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -542,7 +542,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}',
+  url: 'https://api.mithrilx.co/v1/indices/{id_or_code}',
   method: 'get',
 
 
@@ -567,7 +567,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}',
+fetch('https://api.mithrilx.co/v1/indices/{id_or_code}',
 {
   method: 'GET',
 
@@ -594,7 +594,7 @@ headers = {
 }
 
 
-result = RestClient.get 'https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}',
+result = RestClient.get 'https://api.mithrilx.co/v1/indices/{id_or_code}',
   params: {
   }, headers: headers
 
@@ -612,7 +612,7 @@ headers = {
 }
 
 
-r = requests.get('https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}', params={
+r = requests.get('https://api.mithrilx.co/v1/indices/{id_or_code}', params={
 
 
 }, headers = headers)
@@ -625,7 +625,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}");
+URL obj = new URL("https://api.mithrilx.co/v1/indices/{id_or_code}");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -800,7 +800,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/history \
+curl -X GET https://api.mithrilx.co/v1/indices/{id_or_code}/history \
   -H 'Accept: application/json'
 
 
@@ -808,8 +808,8 @@ curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/
 
 
 ```http
-GET https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/history HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+GET https://api.mithrilx.co/v1/indices/{id_or_code}/history HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -827,7 +827,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/history',
+  url: 'https://api.mithrilx.co/v1/indices/{id_or_code}/history',
   method: 'get',
 
 
@@ -852,7 +852,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/history',
+fetch('https://api.mithrilx.co/v1/indices/{id_or_code}/history',
 {
   method: 'GET',
 
@@ -879,7 +879,7 @@ headers = {
 }
 
 
-result = RestClient.get 'https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/history',
+result = RestClient.get 'https://api.mithrilx.co/v1/indices/{id_or_code}/history',
   params: {
   }, headers: headers
 
@@ -897,7 +897,7 @@ headers = {
 }
 
 
-r = requests.get('https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/history', params={
+r = requests.get('https://api.mithrilx.co/v1/indices/{id_or_code}/history', params={
 
 
 }, headers = headers)
@@ -910,7 +910,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/history");
+URL obj = new URL("https://api.mithrilx.co/v1/indices/{id_or_code}/history");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -1042,7 +1042,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/modifications \
+curl -X GET https://api.mithrilx.co/v1/indices/{id_or_code}/modifications \
   -H 'Accept: application/json'
 
 
@@ -1050,8 +1050,8 @@ curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/
 
 
 ```http
-GET https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/modifications HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+GET https://api.mithrilx.co/v1/indices/{id_or_code}/modifications HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -1069,7 +1069,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/modifications',
+  url: 'https://api.mithrilx.co/v1/indices/{id_or_code}/modifications',
   method: 'get',
 
 
@@ -1094,7 +1094,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/modifications',
+fetch('https://api.mithrilx.co/v1/indices/{id_or_code}/modifications',
 {
   method: 'GET',
 
@@ -1121,7 +1121,7 @@ headers = {
 }
 
 
-result = RestClient.get 'https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/modifications',
+result = RestClient.get 'https://api.mithrilx.co/v1/indices/{id_or_code}/modifications',
   params: {
   }, headers: headers
 
@@ -1139,7 +1139,7 @@ headers = {
 }
 
 
-r = requests.get('https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/modifications', params={
+r = requests.get('https://api.mithrilx.co/v1/indices/{id_or_code}/modifications', params={
 
 
 }, headers = headers)
@@ -1152,7 +1152,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/indices/{id_or_code}/modifications");
+URL obj = new URL("https://api.mithrilx.co/v1/indices/{id_or_code}/modifications");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -1250,7 +1250,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs \
+curl -X GET https://api.mithrilx.co/v1/exchange-pairs \
   -H 'Accept: application/json'
 
 
@@ -1258,8 +1258,8 @@ curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs \
 
 
 ```http
-GET https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+GET https://api.mithrilx.co/v1/exchange-pairs HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -1277,7 +1277,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs',
+  url: 'https://api.mithrilx.co/v1/exchange-pairs',
   method: 'get',
 
 
@@ -1302,7 +1302,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs',
+fetch('https://api.mithrilx.co/v1/exchange-pairs',
 {
   method: 'GET',
 
@@ -1329,7 +1329,7 @@ headers = {
 }
 
 
-result = RestClient.get 'https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs',
+result = RestClient.get 'https://api.mithrilx.co/v1/exchange-pairs',
   params: {
   }, headers: headers
 
@@ -1347,7 +1347,7 @@ headers = {
 }
 
 
-r = requests.get('https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs', params={
+r = requests.get('https://api.mithrilx.co/v1/exchange-pairs', params={
 
 
 }, headers = headers)
@@ -1360,7 +1360,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs");
+URL obj = new URL("https://api.mithrilx.co/v1/exchange-pairs");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -1498,7 +1498,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs/{id_or_code} \
+curl -X GET https://api.mithrilx.co/v1/exchange-pairs/{id_or_code} \
   -H 'Accept: application/json'
 
 
@@ -1506,8 +1506,8 @@ curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs/{id_or
 
 
 ```http
-GET https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs/{id_or_code} HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+GET https://api.mithrilx.co/v1/exchange-pairs/{id_or_code} HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -1525,7 +1525,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs/{id_or_code}',
+  url: 'https://api.mithrilx.co/v1/exchange-pairs/{id_or_code}',
   method: 'get',
 
 
@@ -1550,7 +1550,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs/{id_or_code}',
+fetch('https://api.mithrilx.co/v1/exchange-pairs/{id_or_code}',
 {
   method: 'GET',
 
@@ -1577,7 +1577,7 @@ headers = {
 }
 
 
-result = RestClient.get 'https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs/{id_or_code}',
+result = RestClient.get 'https://api.mithrilx.co/v1/exchange-pairs/{id_or_code}',
   params: {
   }, headers: headers
 
@@ -1595,7 +1595,7 @@ headers = {
 }
 
 
-r = requests.get('https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs/{id_or_code}', params={
+r = requests.get('https://api.mithrilx.co/v1/exchange-pairs/{id_or_code}', params={
 
 
 }, headers = headers)
@@ -1608,7 +1608,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/exchange-pairs/{id_or_code}");
+URL obj = new URL("https://api.mithrilx.co/v1/exchange-pairs/{id_or_code}");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -1743,7 +1743,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/pairs \
+curl -X GET https://api.mithrilx.co/v1/pairs \
   -H 'Accept: application/json'
 
 
@@ -1751,8 +1751,8 @@ curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/pairs \
 
 
 ```http
-GET https://api-mithril-x-staging.herokuapp.com/v1/pairs HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+GET https://api.mithrilx.co/v1/pairs HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -1770,7 +1770,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/pairs',
+  url: 'https://api.mithrilx.co/v1/pairs',
   method: 'get',
 
 
@@ -1795,7 +1795,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/pairs',
+fetch('https://api.mithrilx.co/v1/pairs',
 {
   method: 'GET',
 
@@ -1822,7 +1822,7 @@ headers = {
 }
 
 
-result = RestClient.get 'https://api-mithril-x-staging.herokuapp.com/v1/pairs',
+result = RestClient.get 'https://api.mithrilx.co/v1/pairs',
   params: {
   }, headers: headers
 
@@ -1840,7 +1840,7 @@ headers = {
 }
 
 
-r = requests.get('https://api-mithril-x-staging.herokuapp.com/v1/pairs', params={
+r = requests.get('https://api.mithrilx.co/v1/pairs', params={
 
 
 }, headers = headers)
@@ -1853,7 +1853,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/pairs");
+URL obj = new URL("https://api.mithrilx.co/v1/pairs");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -1991,7 +1991,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code} \
+curl -X GET https://api.mithrilx.co/v1/pairs/{id_or_code} \
   -H 'Accept: application/json'
 
 
@@ -1999,8 +1999,8 @@ curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code} \
 
 
 ```http
-GET https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code} HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+GET https://api.mithrilx.co/v1/pairs/{id_or_code} HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -2018,7 +2018,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}',
+  url: 'https://api.mithrilx.co/v1/pairs/{id_or_code}',
   method: 'get',
 
 
@@ -2043,7 +2043,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}',
+fetch('https://api.mithrilx.co/v1/pairs/{id_or_code}',
 {
   method: 'GET',
 
@@ -2070,7 +2070,7 @@ headers = {
 }
 
 
-result = RestClient.get 'https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}',
+result = RestClient.get 'https://api.mithrilx.co/v1/pairs/{id_or_code}',
   params: {
   }, headers: headers
 
@@ -2088,7 +2088,7 @@ headers = {
 }
 
 
-r = requests.get('https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}', params={
+r = requests.get('https://api.mithrilx.co/v1/pairs/{id_or_code}', params={
 
 
 }, headers = headers)
@@ -2101,7 +2101,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}");
+URL obj = new URL("https://api.mithrilx.co/v1/pairs/{id_or_code}");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -2232,7 +2232,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/history \
+curl -X GET https://api.mithrilx.co/v1/pairs/{id_or_code}/history \
   -H 'Accept: application/json'
 
 
@@ -2240,8 +2240,8 @@ curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/hi
 
 
 ```http
-GET https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/history HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+GET https://api.mithrilx.co/v1/pairs/{id_or_code}/history HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -2259,7 +2259,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/history',
+  url: 'https://api.mithrilx.co/v1/pairs/{id_or_code}/history',
   method: 'get',
 
 
@@ -2284,7 +2284,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/history',
+fetch('https://api.mithrilx.co/v1/pairs/{id_or_code}/history',
 {
   method: 'GET',
 
@@ -2311,7 +2311,7 @@ headers = {
 }
 
 
-result = RestClient.get 'https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/history',
+result = RestClient.get 'https://api.mithrilx.co/v1/pairs/{id_or_code}/history',
   params: {
   }, headers: headers
 
@@ -2329,7 +2329,7 @@ headers = {
 }
 
 
-r = requests.get('https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/history', params={
+r = requests.get('https://api.mithrilx.co/v1/pairs/{id_or_code}/history', params={
 
 
 }, headers = headers)
@@ -2342,7 +2342,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/history");
+URL obj = new URL("https://api.mithrilx.co/v1/pairs/{id_or_code}/history");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -2447,7 +2447,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/volume_ratio \
+curl -X GET https://api.mithrilx.co/v1/pairs/{id_or_code}/volume_ratio \
   -H 'Accept: application/json'
 
 
@@ -2455,8 +2455,8 @@ curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/vo
 
 
 ```http
-GET https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/volume_ratio HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+GET https://api.mithrilx.co/v1/pairs/{id_or_code}/volume_ratio HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -2474,7 +2474,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/volume_ratio',
+  url: 'https://api.mithrilx.co/v1/pairs/{id_or_code}/volume_ratio',
   method: 'get',
 
 
@@ -2499,7 +2499,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/volume_ratio',
+fetch('https://api.mithrilx.co/v1/pairs/{id_or_code}/volume_ratio',
 {
   method: 'GET',
 
@@ -2526,7 +2526,7 @@ headers = {
 }
 
 
-result = RestClient.get 'https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/volume_ratio',
+result = RestClient.get 'https://api.mithrilx.co/v1/pairs/{id_or_code}/volume_ratio',
   params: {
   }, headers: headers
 
@@ -2544,7 +2544,7 @@ headers = {
 }
 
 
-r = requests.get('https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/volume_ratio', params={
+r = requests.get('https://api.mithrilx.co/v1/pairs/{id_or_code}/volume_ratio', params={
 
 
 }, headers = headers)
@@ -2557,7 +2557,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/pairs/{id_or_code}/volume_ratio");
+URL obj = new URL("https://api.mithrilx.co/v1/pairs/{id_or_code}/volume_ratio");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -2650,7 +2650,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/exchanges \
+curl -X GET https://api.mithrilx.co/v1/exchanges \
   -H 'Accept: application/json'
 
 
@@ -2658,8 +2658,8 @@ curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/exchanges \
 
 
 ```http
-GET https://api-mithril-x-staging.herokuapp.com/v1/exchanges HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+GET https://api.mithrilx.co/v1/exchanges HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -2677,7 +2677,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/exchanges',
+  url: 'https://api.mithrilx.co/v1/exchanges',
   method: 'get',
 
 
@@ -2702,7 +2702,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/exchanges',
+fetch('https://api.mithrilx.co/v1/exchanges',
 {
   method: 'GET',
 
@@ -2729,7 +2729,7 @@ headers = {
 }
 
 
-result = RestClient.get 'https://api-mithril-x-staging.herokuapp.com/v1/exchanges',
+result = RestClient.get 'https://api.mithrilx.co/v1/exchanges',
   params: {
   }, headers: headers
 
@@ -2747,7 +2747,7 @@ headers = {
 }
 
 
-r = requests.get('https://api-mithril-x-staging.herokuapp.com/v1/exchanges', params={
+r = requests.get('https://api.mithrilx.co/v1/exchanges', params={
 
 
 }, headers = headers)
@@ -2760,7 +2760,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/exchanges");
+URL obj = new URL("https://api.mithrilx.co/v1/exchanges");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -2855,7 +2855,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/exchanges/{id_or_code} \
+curl -X GET https://api.mithrilx.co/v1/exchanges/{id_or_code} \
   -H 'Accept: application/json'
 
 
@@ -2863,8 +2863,8 @@ curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/exchanges/{id_or_code
 
 
 ```http
-GET https://api-mithril-x-staging.herokuapp.com/v1/exchanges/{id_or_code} HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+GET https://api.mithrilx.co/v1/exchanges/{id_or_code} HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -2882,7 +2882,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/exchanges/{id_or_code}',
+  url: 'https://api.mithrilx.co/v1/exchanges/{id_or_code}',
   method: 'get',
 
 
@@ -2907,7 +2907,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/exchanges/{id_or_code}',
+fetch('https://api.mithrilx.co/v1/exchanges/{id_or_code}',
 {
   method: 'GET',
 
@@ -2934,7 +2934,7 @@ headers = {
 }
 
 
-result = RestClient.get 'https://api-mithril-x-staging.herokuapp.com/v1/exchanges/{id_or_code}',
+result = RestClient.get 'https://api.mithrilx.co/v1/exchanges/{id_or_code}',
   params: {
   }, headers: headers
 
@@ -2952,7 +2952,7 @@ headers = {
 }
 
 
-r = requests.get('https://api-mithril-x-staging.herokuapp.com/v1/exchanges/{id_or_code}', params={
+r = requests.get('https://api.mithrilx.co/v1/exchanges/{id_or_code}', params={
 
 
 }, headers = headers)
@@ -2965,7 +2965,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/exchanges/{id_or_code}");
+URL obj = new URL("https://api.mithrilx.co/v1/exchanges/{id_or_code}");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -3066,7 +3066,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/currencies \
+curl -X GET https://api.mithrilx.co/v1/currencies \
   -H 'Accept: application/json'
 
 
@@ -3074,8 +3074,8 @@ curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/currencies \
 
 
 ```http
-GET https://api-mithril-x-staging.herokuapp.com/v1/currencies HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+GET https://api.mithrilx.co/v1/currencies HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -3093,7 +3093,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/currencies',
+  url: 'https://api.mithrilx.co/v1/currencies',
   method: 'get',
 
 
@@ -3118,7 +3118,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/currencies',
+fetch('https://api.mithrilx.co/v1/currencies',
 {
   method: 'GET',
 
@@ -3145,7 +3145,7 @@ headers = {
 }
 
 
-result = RestClient.get 'https://api-mithril-x-staging.herokuapp.com/v1/currencies',
+result = RestClient.get 'https://api.mithrilx.co/v1/currencies',
   params: {
   }, headers: headers
 
@@ -3163,7 +3163,7 @@ headers = {
 }
 
 
-r = requests.get('https://api-mithril-x-staging.herokuapp.com/v1/currencies', params={
+r = requests.get('https://api.mithrilx.co/v1/currencies', params={
 
 
 }, headers = headers)
@@ -3176,7 +3176,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/currencies");
+URL obj = new URL("https://api.mithrilx.co/v1/currencies");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -3311,7 +3311,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code} \
+curl -X GET https://api.mithrilx.co/v1/currencies/{id_or_code} \
   -H 'Accept: application/json'
 
 
@@ -3319,8 +3319,8 @@ curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_cod
 
 
 ```http
-GET https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code} HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+GET https://api.mithrilx.co/v1/currencies/{id_or_code} HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -3338,7 +3338,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}',
+  url: 'https://api.mithrilx.co/v1/currencies/{id_or_code}',
   method: 'get',
 
 
@@ -3363,7 +3363,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}',
+fetch('https://api.mithrilx.co/v1/currencies/{id_or_code}',
 {
   method: 'GET',
 
@@ -3390,7 +3390,7 @@ headers = {
 }
 
 
-result = RestClient.get 'https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}',
+result = RestClient.get 'https://api.mithrilx.co/v1/currencies/{id_or_code}',
   params: {
   }, headers: headers
 
@@ -3408,7 +3408,7 @@ headers = {
 }
 
 
-r = requests.get('https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}', params={
+r = requests.get('https://api.mithrilx.co/v1/currencies/{id_or_code}', params={
 
 
 }, headers = headers)
@@ -3421,7 +3421,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}");
+URL obj = new URL("https://api.mithrilx.co/v1/currencies/{id_or_code}");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -3544,7 +3544,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/volume_ratio \
+curl -X GET https://api.mithrilx.co/v1/currencies/{id_or_code}/volume_ratio \
   -H 'Accept: application/json'
 
 
@@ -3552,8 +3552,8 @@ curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_cod
 
 
 ```http
-GET https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/volume_ratio HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+GET https://api.mithrilx.co/v1/currencies/{id_or_code}/volume_ratio HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -3571,7 +3571,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/volume_ratio',
+  url: 'https://api.mithrilx.co/v1/currencies/{id_or_code}/volume_ratio',
   method: 'get',
 
 
@@ -3596,7 +3596,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/volume_ratio',
+fetch('https://api.mithrilx.co/v1/currencies/{id_or_code}/volume_ratio',
 {
   method: 'GET',
 
@@ -3623,7 +3623,7 @@ headers = {
 }
 
 
-result = RestClient.get 'https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/volume_ratio',
+result = RestClient.get 'https://api.mithrilx.co/v1/currencies/{id_or_code}/volume_ratio',
   params: {
   }, headers: headers
 
@@ -3641,7 +3641,7 @@ headers = {
 }
 
 
-r = requests.get('https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/volume_ratio', params={
+r = requests.get('https://api.mithrilx.co/v1/currencies/{id_or_code}/volume_ratio', params={
 
 
 }, headers = headers)
@@ -3654,7 +3654,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/volume_ratio");
+URL obj = new URL("https://api.mithrilx.co/v1/currencies/{id_or_code}/volume_ratio");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -3747,7 +3747,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/supplies \
+curl -X GET https://api.mithrilx.co/v1/currencies/{id_or_code}/supplies \
   -H 'Accept: application/json'
 
 
@@ -3755,8 +3755,8 @@ curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_cod
 
 
 ```http
-GET https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/supplies HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+GET https://api.mithrilx.co/v1/currencies/{id_or_code}/supplies HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -3774,7 +3774,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/supplies',
+  url: 'https://api.mithrilx.co/v1/currencies/{id_or_code}/supplies',
   method: 'get',
 
 
@@ -3799,7 +3799,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/supplies',
+fetch('https://api.mithrilx.co/v1/currencies/{id_or_code}/supplies',
 {
   method: 'GET',
 
@@ -3826,7 +3826,7 @@ headers = {
 }
 
 
-result = RestClient.get 'https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/supplies',
+result = RestClient.get 'https://api.mithrilx.co/v1/currencies/{id_or_code}/supplies',
   params: {
   }, headers: headers
 
@@ -3844,7 +3844,7 @@ headers = {
 }
 
 
-r = requests.get('https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/supplies', params={
+r = requests.get('https://api.mithrilx.co/v1/currencies/{id_or_code}/supplies', params={
 
 
 }, headers = headers)
@@ -3857,7 +3857,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/currencies/{id_or_code}/supplies");
+URL obj = new URL("https://api.mithrilx.co/v1/currencies/{id_or_code}/supplies");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -3949,7 +3949,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/users/current \
+curl -X GET https://api.mithrilx.co/v1/users/current \
   -H 'Accept: application/json'
 
 
@@ -3957,8 +3957,8 @@ curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/users/current \
 
 
 ```http
-GET https://api-mithril-x-staging.herokuapp.com/v1/users/current HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+GET https://api.mithrilx.co/v1/users/current HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -3976,7 +3976,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/users/current',
+  url: 'https://api.mithrilx.co/v1/users/current',
   method: 'get',
 
 
@@ -4001,7 +4001,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/users/current',
+fetch('https://api.mithrilx.co/v1/users/current',
 {
   method: 'GET',
 
@@ -4028,7 +4028,7 @@ headers = {
 }
 
 
-result = RestClient.get 'https://api-mithril-x-staging.herokuapp.com/v1/users/current',
+result = RestClient.get 'https://api.mithrilx.co/v1/users/current',
   params: {
   }, headers: headers
 
@@ -4046,7 +4046,7 @@ headers = {
 }
 
 
-r = requests.get('https://api-mithril-x-staging.herokuapp.com/v1/users/current', params={
+r = requests.get('https://api.mithrilx.co/v1/users/current', params={
 
 
 }, headers = headers)
@@ -4059,7 +4059,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/users/current");
+URL obj = new URL("https://api.mithrilx.co/v1/users/current");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -4138,7 +4138,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X POST https://api-mithril-x-staging.herokuapp.com/v1/users/login \
+curl -X POST https://api.mithrilx.co/v1/users/login \
   -H 'Accept: application/json'
 
 
@@ -4146,8 +4146,8 @@ curl -X POST https://api-mithril-x-staging.herokuapp.com/v1/users/login \
 
 
 ```http
-POST https://api-mithril-x-staging.herokuapp.com/v1/users/login HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+POST https://api.mithrilx.co/v1/users/login HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -4165,7 +4165,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/users/login',
+  url: 'https://api.mithrilx.co/v1/users/login',
   method: 'post',
 
 
@@ -4190,7 +4190,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/users/login',
+fetch('https://api.mithrilx.co/v1/users/login',
 {
   method: 'POST',
 
@@ -4217,7 +4217,7 @@ headers = {
 }
 
 
-result = RestClient.post 'https://api-mithril-x-staging.herokuapp.com/v1/users/login',
+result = RestClient.post 'https://api.mithrilx.co/v1/users/login',
   params: {
   }, headers: headers
 
@@ -4235,7 +4235,7 @@ headers = {
 }
 
 
-r = requests.post('https://api-mithril-x-staging.herokuapp.com/v1/users/login', params={
+r = requests.post('https://api.mithrilx.co/v1/users/login', params={
 
 
 }, headers = headers)
@@ -4248,7 +4248,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/users/login");
+URL obj = new URL("https://api.mithrilx.co/v1/users/login");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("POST");
 int responseCode = con.getResponseCode();
@@ -4327,7 +4327,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions \
+curl -X GET https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions \
   -H 'Accept: application/json'
 
 
@@ -4335,8 +4335,8 @@ curl -X GET https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/su
 
 
 ```http
-GET https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+GET https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -4354,7 +4354,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions',
+  url: 'https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions',
   method: 'get',
 
 
@@ -4379,7 +4379,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions',
+fetch('https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions',
 {
   method: 'GET',
 
@@ -4406,7 +4406,7 @@ headers = {
 }
 
 
-result = RestClient.get 'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions',
+result = RestClient.get 'https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions',
   params: {
   }, headers: headers
 
@@ -4424,7 +4424,7 @@ headers = {
 }
 
 
-r = requests.get('https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions', params={
+r = requests.get('https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions', params={
 
 
 }, headers = headers)
@@ -4437,7 +4437,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions");
+URL obj = new URL("https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -4493,7 +4493,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X POST https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions \
+curl -X POST https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions \
   -H 'Accept: application/json'
 
 
@@ -4501,8 +4501,8 @@ curl -X POST https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/s
 
 
 ```http
-POST https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+POST https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -4520,7 +4520,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions',
+  url: 'https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions',
   method: 'post',
 
 
@@ -4545,7 +4545,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions',
+fetch('https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions',
 {
   method: 'POST',
 
@@ -4572,7 +4572,7 @@ headers = {
 }
 
 
-result = RestClient.post 'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions',
+result = RestClient.post 'https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions',
   params: {
   }, headers: headers
 
@@ -4590,7 +4590,7 @@ headers = {
 }
 
 
-r = requests.post('https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions', params={
+r = requests.post('https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions', params={
 
 
 }, headers = headers)
@@ -4603,7 +4603,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions");
+URL obj = new URL("https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("POST");
 int responseCode = con.getResponseCode();
@@ -4659,7 +4659,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X DELETE https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions \
+curl -X DELETE https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions \
   -H 'Accept: application/json'
 
 
@@ -4667,8 +4667,8 @@ curl -X DELETE https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}
 
 
 ```http
-DELETE https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+DELETE https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -4686,7 +4686,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions',
+  url: 'https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions',
   method: 'delete',
 
 
@@ -4711,7 +4711,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions',
+fetch('https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions',
 {
   method: 'DELETE',
 
@@ -4738,7 +4738,7 @@ headers = {
 }
 
 
-result = RestClient.delete 'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions',
+result = RestClient.delete 'https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions',
   params: {
   }, headers: headers
 
@@ -4756,7 +4756,7 @@ headers = {
 }
 
 
-r = requests.delete('https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions', params={
+r = requests.delete('https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions', params={
 
 
 }, headers = headers)
@@ -4769,7 +4769,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/subscriptions");
+URL obj = new URL("https://api.mithrilx.co/v1/users/{id_or_mail}/subscriptions");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("DELETE");
 int responseCode = con.getResponseCode();
@@ -4825,7 +4825,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X POST https://api-mithril-x-staging.herokuapp.com/v1/users/feedback \
+curl -X POST https://api.mithrilx.co/v1/users/feedback \
   -H 'Accept: application/json'
 
 
@@ -4833,8 +4833,8 @@ curl -X POST https://api-mithril-x-staging.herokuapp.com/v1/users/feedback \
 
 
 ```http
-POST https://api-mithril-x-staging.herokuapp.com/v1/users/feedback HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+POST https://api.mithrilx.co/v1/users/feedback HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -4852,7 +4852,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/users/feedback',
+  url: 'https://api.mithrilx.co/v1/users/feedback',
   method: 'post',
 
 
@@ -4877,7 +4877,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/users/feedback',
+fetch('https://api.mithrilx.co/v1/users/feedback',
 {
   method: 'POST',
 
@@ -4904,7 +4904,7 @@ headers = {
 }
 
 
-result = RestClient.post 'https://api-mithril-x-staging.herokuapp.com/v1/users/feedback',
+result = RestClient.post 'https://api.mithrilx.co/v1/users/feedback',
   params: {
   }, headers: headers
 
@@ -4922,7 +4922,7 @@ headers = {
 }
 
 
-r = requests.post('https://api-mithril-x-staging.herokuapp.com/v1/users/feedback', params={
+r = requests.post('https://api.mithrilx.co/v1/users/feedback', params={
 
 
 }, headers = headers)
@@ -4935,7 +4935,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/users/feedback");
+URL obj = new URL("https://api.mithrilx.co/v1/users/feedback");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("POST");
 int responseCode = con.getResponseCode();
@@ -4983,7 +4983,7 @@ This operation does not require authentication
 
 ```shell
 # You can also use wget
-curl -X POST https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/newsletter \
+curl -X POST https://api.mithrilx.co/v1/users/{id_or_mail}/newsletter \
   -H 'Accept: application/json'
 
 
@@ -4991,8 +4991,8 @@ curl -X POST https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/n
 
 
 ```http
-POST https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/newsletter HTTP/1.1
-Host: api-mithril-x-staging.herokuapp.com
+POST https://api.mithrilx.co/v1/users/{id_or_mail}/newsletter HTTP/1.1
+Host: api.mithrilx.co
 
 
 Accept: application/json
@@ -5010,7 +5010,7 @@ var headers = {
 
 
 $.ajax({
-  url: 'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/newsletter',
+  url: 'https://api.mithrilx.co/v1/users/{id_or_mail}/newsletter',
   method: 'post',
 
 
@@ -5035,7 +5035,7 @@ const headers = {
 };
 
 
-fetch('https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/newsletter',
+fetch('https://api.mithrilx.co/v1/users/{id_or_mail}/newsletter',
 {
   method: 'POST',
 
@@ -5062,7 +5062,7 @@ headers = {
 }
 
 
-result = RestClient.post 'https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/newsletter',
+result = RestClient.post 'https://api.mithrilx.co/v1/users/{id_or_mail}/newsletter',
   params: {
   }, headers: headers
 
@@ -5080,7 +5080,7 @@ headers = {
 }
 
 
-r = requests.post('https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/newsletter', params={
+r = requests.post('https://api.mithrilx.co/v1/users/{id_or_mail}/newsletter', params={
 
 
 }, headers = headers)
@@ -5093,7 +5093,7 @@ print r.json()
 
 
 ```java
-URL obj = new URL("https://api-mithril-x-staging.herokuapp.com/v1/users/{id_or_mail}/newsletter");
+URL obj = new URL("https://api.mithrilx.co/v1/users/{id_or_mail}/newsletter");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("POST");
 int responseCode = con.getResponseCode();
