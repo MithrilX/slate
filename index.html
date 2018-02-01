@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>MithrilX</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -212,9 +212,6 @@
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -222,218 +219,1863 @@
         <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
-          </li>
-          <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#rest-api" class="toc-h2 toc-link" data-title="rest-api">REST API</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#websockets-feed" class="toc-h2 toc-link" data-title="websockets-feed">WebSockets Feed</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#v1-indices" class="toc-h1 toc-link" data-title="v1-indices">/V1/INDICES</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post" class="toc-h2 toc-link" data-title="strong-em-post-em-strong"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-indices-id_or_code" class="toc-h1 toc-link" data-title="v1-indices-id_or_code">/V1/INDICES/{ID_OR_CODE}</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-2" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-indices-test" class="toc-h1 toc-link" data-title="v1-indices-test">/V1/INDICES/TEST</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-2" class="toc-h2 toc-link" data-title="strong-em-post-em-strong"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-indices-id_or_code-history" class="toc-h1 toc-link" data-title="v1-indices-id_or_code-history">/V1/INDICES/{ID_OR_CODE}/HISTORY</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-3" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-indices-id_or_code-rebalance" class="toc-h1 toc-link" data-title="v1-indices-id_or_code-rebalance">/V1/INDICES/{ID_OR_CODE}/REBALANCE</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-3" class="toc-h2 toc-link" data-title="strong-em-post-em-strong"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-indices-id_or_code-pairs-pair_id_or_code" class="toc-h1 toc-link" data-title="v1-indices-id_or_code-pairs-pair_id_or_code">/V1/INDICES/{ID_OR_CODE}/PAIRS/{PAIR_ID_OR_CODE}</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-4" class="toc-h2 toc-link" data-title="strong-em-post-em-strong"><strong><em>POST</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#delete" class="toc-h2 toc-link" data-title="strong-em-delete-em-strong"><strong><em>DELETE</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-indices-id_or_code-modifications" class="toc-h1 toc-link" data-title="v1-indices-id_or_code-modifications">/V1/INDICES/{ID_OR_CODE}/MODIFICATIONS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-4" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-exchange-pairs" class="toc-h1 toc-link" data-title="v1-exchange-pairs">/V1/EXCHANGE-PAIRS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-5" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-exchange-pairs-id_or_code" class="toc-h1 toc-link" data-title="v1-exchange-pairs-id_or_code">/V1/EXCHANGE-PAIRS/{ID_OR_CODE}</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-6" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-pairs" class="toc-h1 toc-link" data-title="v1-pairs">/V1/PAIRS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-7" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-pairs-id_or_code" class="toc-h1 toc-link" data-title="v1-pairs-id_or_code">/V1/PAIRS/{ID_OR_CODE}</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-8" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-pairs-id_or_code-history" class="toc-h1 toc-link" data-title="v1-pairs-id_or_code-history">/V1/PAIRS/{ID_OR_CODE}/HISTORY</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-9" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-pairs-id_or_code-volume_ratio" class="toc-h1 toc-link" data-title="v1-pairs-id_or_code-volume_ratio">/V1/PAIRS/{ID_OR_CODE}/VOLUME_RATIO</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-10" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-exchanges" class="toc-h1 toc-link" data-title="v1-exchanges">/V1/EXCHANGES</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-11" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-exchanges-id_or_code" class="toc-h1 toc-link" data-title="v1-exchanges-id_or_code">/V1/EXCHANGES/{ID_OR_CODE}</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-12" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-currencies" class="toc-h1 toc-link" data-title="v1-currencies">/V1/CURRENCIES</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-13" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-currencies-id_or_code" class="toc-h1 toc-link" data-title="v1-currencies-id_or_code">/V1/CURRENCIES/{ID_OR_CODE}</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-14" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-currencies-id_or_code-volume_ratio" class="toc-h1 toc-link" data-title="v1-currencies-id_or_code-volume_ratio">/V1/CURRENCIES/{ID_OR_CODE}/VOLUME_RATIO</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-15" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-currencies-id_or_code-supplies" class="toc-h1 toc-link" data-title="v1-currencies-id_or_code-supplies">/V1/CURRENCIES/{ID_OR_CODE}/SUPPLIES</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-16" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-users" class="toc-h1 toc-link" data-title="v1-users">/V1/USERS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-17" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post-5" class="toc-h2 toc-link" data-title="strong-em-post-em-strong"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-users-current" class="toc-h1 toc-link" data-title="v1-users-current">/V1/USERS/CURRENT</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-18" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-users-id_or_mail" class="toc-h1 toc-link" data-title="v1-users-id_or_mail">/V1/USERS/{ID_OR_MAIL}</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-19" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-users-login" class="toc-h1 toc-link" data-title="v1-users-login">/V1/USERS/LOGIN</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-6" class="toc-h2 toc-link" data-title="strong-em-post-em-strong"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-users-id" class="toc-h1 toc-link" data-title="v1-users-id">/V1/USERS/{ID}</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#delete-2" class="toc-h2 toc-link" data-title="strong-em-delete-em-strong"><strong><em>DELETE</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-users-id_or_mail-subscriptions" class="toc-h1 toc-link" data-title="v1-users-id_or_mail-subscriptions">/V1/USERS/{ID_OR_MAIL}/SUBSCRIPTIONS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-20" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post-7" class="toc-h2 toc-link" data-title="strong-em-post-em-strong"><strong><em>POST</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#delete-3" class="toc-h2 toc-link" data-title="strong-em-delete-em-strong"><strong><em>DELETE</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-users-feedback" class="toc-h1 toc-link" data-title="v1-users-feedback">/V1/USERS/FEEDBACK</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-8" class="toc-h2 toc-link" data-title="strong-em-post-em-strong"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v1-users-id_or_mail-newsletter" class="toc-h1 toc-link" data-title="v1-users-id_or_mail-newsletter">/V1/USERS/{ID_OR_MAIL}/NEWSLETTER</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-9" class="toc-h2 toc-link" data-title="strong-em-post-em-strong"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="errors">Errors</a>
           </li>
       </div>
         <ul class="toc-footer">
             <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+            <li><a href='https://github.com/lavkumarv'>Documentation Powered by lav</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+        <h1 id='introduction'>Introduction</h1><h2 id='rest-api'>REST API</h2>
+<p>This documentation presents the general guidelines followed when designing this API. For specific information about a particular endpoint, please refer to the endpoint&#39;s documentation itself.</p>
+<h3 id='authentication'>Authentication</h3>
+<p>Endpoints are all public for now.</p>
+<h3 id='headers'>Headers</h3>
+<p>Most endpoints require the <code>Content-Type</code> and <code>Accept</code> headers to be set to <code>application/json</code>.</p>
+<h3 id='response-formats'>Response formats</h3><h4 id='post-requests'>POST requests</h4>
+<ul>
+<li><code>data</code>: Holds the object(s) created in this request</li>
+</ul>
+<h4 id='get-requests'>GET requests</h4>
+<ul>
+<li><code>data</code>: Holds the object(s) returned for this request</li>
+<li><code>meta</code>: In case multiple objects are being returned, or if the endpoint is paginated, the <code>meta</code> object will hold the following properties
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<ul>
+<li><code>limit</code>: The limit used to query the endpoint</li>
+<li><code>offset</code>: The amount of objects skipped in the query</li>
+<li><code>count</code>: The total amount of objects corresponding to the query (they might not all be returned due to <code>limit</code>)</li>
+</ul></li>
+</ul>
+<h4 id='patch-requests'>PATCH requests</h4>
+<ul>
+<li><code>meta</code>: Holds a <code>count</code> property corresponding to the amount of objects impacted by the update</li>
+</ul>
+<h4 id='delete-requests'>DELETE requests</h4>
+<ul>
+<li><code>meta</code>: Holds a <code>count</code> property corresponding to the amount of objects deleted by the request</li>
+</ul>
+<h4 id='errors'>Errors</h4>
+<ul>
+<li><code>error</code>: Simple boolean indicating that the request failed, always <code>true</code></li>
+<li><code>message</code>: A human readable message indicating the reason why the request failed</li>
+<li><code>meta</code>: Various information about the error, including a JSON <code>schema</code> property if a payload was the cause of the error</li>
+</ul>
+<h3 id='keywords'>Keywords</h3>
+<p>The API makes use of a few keyword, to be used in the query string parameters
+- <code>limit</code>: For GET / requests, allows you to control how many objects are being returned
+- <code>offset</code>: For GET / requests, allows use to skip objects from the research
+- <code>decorate</code>: Is an array of computed properties which you wish to see included for each object. For performance reasons, those computed are not returned by default
+- <code>expand</code>: NOT AVAILABLE YET</p>
+<h3 id='filters-amp-operators'>Filters &amp; Operators</h3>
+<p>GET / requests might expose a number of filters in order to refine the search you&#39;re making.</p>
 
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p>Additionally, some of those filters might also support operators. Operators are a convenient way to fine tune your query and are appended to the property name using <code>__</code>.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>Existing operators:
+- <code>in</code>: Similar to SQL&#39;s IN clause
+- <code>nin</code>: Similar to SQL&#39;s NOT IN clause
+- <code>ne</code>: Different than
+- <code>gt</code>: Greater than
+- <code>gte</code>: Greater than equal
+- <code>lt</code>: Lower than
+- <code>lte</code>: Lower than equal</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<p>Example filter coupled with an operator : <code>type__in</code></p>
+<h2 id='websockets-feed'>WebSockets Feed</h2><h3 id='subscribing-unsubscribing'>Subscribing/Unsubscribing</h3>
+<p>Subscribing is done by sending a <code>subscribe</code> event and unsubscribing is done by sending an <code>unsubscribe</code> event. Both payloads follow the same format.</p>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+<p>You can choose to subscribe to <em>indices</em>, <em>pairs</em> or <em>exchange pairs</em> changes. Currently only the <code>ticker</code> channel is available.</p>
+<h4 id='example'>Example:</h4><pre class="highlight javascript tab-javascript"><code><span class="nx">socket</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
+  <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"subscribe"</span><span class="p">,</span>
+  <span class="s2">"index_ids"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+  <span class="s2">"pair_ids"</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+  <span class="s2">"exchange_pair_ids"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+  <span class="s2">"channels"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"ticker"</span><span class="p">]</span>
+<span class="p">})</span>
+</code></pre><h3 id='events'>Events</h3><h4 id='ticker-index'><code>ticker:index</code></h4>
+<p>This event is triggered for each change on an index.</p>
+<pre class="highlight plaintext"><code>{
+  "type": "ticker:index",
+  "data": {
+      "index_id": 1,
+      "price": "34563546",
+      "change_hour": "-0.035",
+      "change_24h": "1.123",
+      "change_week": "0.897",
+      "change_month": "1.453",
+      "change_three_months": "5.453",
+      "change_year": "10.453"
+  }
+}
+</code></pre><h4 id='ticker-pair'><code>ticker:pair</code></h4>
+<p>This event is triggered for each change on a pair.</p>
+<pre class="highlight plaintext"><code>{
+  "type": "ticker:pair",
+  "data": {
+      "pair_id": 1,
+      "price": "34563546",
+      "volume": "23434",
+      "change_hour": "-0.035",
+      "change_24h": "1.123",
+      "change_week": "0.897",
+      "change_month": "1.453",
+      "change_three_months": "5.453",
+      "change_year": "10.453"
+  }
+}
+</code></pre><h4 id='ticker-exchange_pair'><code>ticker:exchange_pair</code></h4>
+<p>This event is triggered for each change on a exchange pair.</p>
+<pre class="highlight plaintext"><code>{
+  "type": "ticker:exchange_pair",
+  "data": {
+      "pair_id": 1,
+      "price": "34563546",
+      "volume": "23434",
+      "change_hour": "-0.035",
+      "change_24h": "1.123",
+      "change_week": "0.897",
+      "change_month": "1.453",
+      "change_three_months": "5.453",
+      "change_year": "10.453"
+  }
+}
+</code></pre><h4 id='error'><code>error</code></h4>
+<p>Error can occur if you send a wrong subscription for example.</p>
+<pre class="highlight plaintext"><code>{
+  "type": "error",
+  "message": "Something went wrong."
+}
 </code></pre>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
+<p><strong>Version:</strong> v1 </p>
+<h1 id='v1-indices'>/V1/INDICES</h1><h2 id='get'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Returns a list of indices</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+<p><code>***GET*** /v1/indices</code> </p>
+
+<p><strong>Parameters</strong></p>
+
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default</th>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>query</td>
+<td>The maximum amount of resources to be returned for this request.</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>offset</td>
+<td>query</td>
+<td>The amount of resources skipped for this request.</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>decorate</td>
+<td>query</td>
+<td>Decorations (computed fields) to be attached to the returned objects.</td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>200</td>
+<td>A list of indices</td>
 </tr>
 </tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<h2 id='post'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Creates a new index</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+<p><code>***POST*** /v1/indices</code> </p>
+
+<p><strong>Responses</strong></p>
+
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Code</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>201</td>
+<td>The newly created index</td>
+</tr>
+<tr>
+<td>400</td>
+<td>- Max number of constituents condition failed. - There are no pairs that match given conditions. - One or multiple &quot;pair_ids&quot; are not consistent with &quot;quote_currency_id&quot;, ie. are not quotable in that currency - The &quot;quote_currency_id&quot; doesn&#39;t map to a &quot;quotable&quot; currency - You did not provide a definition for a &quot;dynamic&quot; index - You provided a definition for a &quot;static&quot; index</td>
+</tr>
+<tr>
+<td>409</td>
+<td>- An index with the same &quot;code&quot; already exists</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
+<h1 id='v1-indices-id_or_code'>/V1/INDICES/{ID_OR_CODE}</h1><h2 id='get-2'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Gets an index by id or code</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<p><code>***GET*** /v1/indices/{id_or_code}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_or_code</td>
+<td>path</td>
+<td>id_or_code</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>200</td>
+<td>The corresponding index</td>
+</tr>
+<tr>
+<td>404</td>
+<td>- No corresponding index found for this id or code</td>
 </tr>
 </tbody></table>
+<h1 id='v1-indices-test'>/V1/INDICES/TEST</h1><h2 id='post-2'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Test dynamic index definition and return suitable constituents if test was successful</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>***POST*** /v1/indices/test</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>A list of suitable constituents (pairs)</td>
+</tr>
+<tr>
+<td>400</td>
+<td>- NO_CONSTITUENTS_HISTORY_DATA - NO_CONSTITUENTS_MATCH - INDEX_CODE_ALREADY_EXIST - INDEX_NAME_ALREADY_EXIST</td>
+</tr>
+</tbody></table>
+<h1 id='v1-indices-id_or_code-history'>/V1/INDICES/{ID_OR_CODE}/HISTORY</h1><h2 id='get-3'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Return history data for index constituents</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>***GET*** /v1/indices/{id_or_code}/history</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_or_code</td>
+<td>path</td>
+<td>id_or_code</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>from</td>
+<td>query</td>
+<td>Start date of index pairs historic data. Format is UTC+0 timestamp.</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>to</td>
+<td>query</td>
+<td>End date of index pairs historic data. Format is UTC+0 timestamp.</td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>A history data for index constituents</td>
+</tr>
+</tbody></table>
+<h1 id='v1-indices-id_or_code-rebalance'>/V1/INDICES/{ID_OR_CODE}/REBALANCE</h1><h2 id='post-3'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Perform index rebalancing - recalculate constituents percents and use it from rebalance moment to calculate index prices</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>***POST*** /v1/indices/{id_or_code}/rebalance</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_or_code</td>
+<td>path</td>
+<td>id_or_code</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>The index decorated with rebalanced index pairs</td>
+</tr>
+<tr>
+<td>404</td>
+<td>- No corresponding index found for this id</td>
+</tr>
+</tbody></table>
+<h1 id='v1-indices-id_or_code-pairs-pair_id_or_code'>/V1/INDICES/{ID_OR_CODE}/PAIRS/{PAIR_ID_OR_CODE}</h1><h2 id='post-4'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Add given pair to index constituents</p>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>***POST*** /v1/indices/{id_or_code}/pairs/{pair_id_or_code}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_or_code</td>
+<td>path</td>
+<td>id_or_code</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>The index with added pair</td>
+</tr>
+<tr>
+<td>404</td>
+<td>- No corresponding index found for this id</td>
+</tr>
+</tbody></table>
+<h2 id='delete'><strong><em>DELETE</em></strong></h2>
+<p><strong>Summary:</strong> Delete given pair from index constituents</p>
+<h3 id='http-request-8'>HTTP Request</h3>
+<p><code>***DELETE*** /v1/indices/{id_or_code}/pairs/{pair_id_or_code}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_or_code</td>
+<td>path</td>
+<td>id_or_code</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>The index with deleted pair</td>
+</tr>
+<tr>
+<td>404</td>
+<td>- No corresponding index found for this id</td>
+</tr>
+</tbody></table>
+<h1 id='v1-indices-id_or_code-modifications'>/V1/INDICES/{ID_OR_CODE}/MODIFICATIONS</h1><h2 id='get-4'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Find potential index constituents modifications</p>
+<h3 id='http-request-9'>HTTP Request</h3>
+<p><code>***GET*** /v1/indices/{id_or_code}/modifications</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_or_code</td>
+<td>path</td>
+<td>id_or_code</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Potential index constituents modifications (additions and deletions)</td>
+</tr>
+</tbody></table>
+<h1 id='v1-exchange-pairs'>/V1/EXCHANGE-PAIRS</h1><h2 id='get-5'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Returns a list of exchange pairs</p>
+<h3 id='http-request-10'>HTTP Request</h3>
+<p><code>***GET*** /v1/exchange-pairs</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>query</td>
+<td>The maximum amount of resources to be returned for this request.</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>offset</td>
+<td>query</td>
+<td>The amount of resources skipped for this request.</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>id</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>id__in</td>
+<td>query</td>
+<td>id__in</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>code</td>
+<td>query</td>
+<td>The resource&#39;s unique code</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>code__in</td>
+<td>query</td>
+<td>code__in</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>pair_id</td>
+<td>query</td>
+<td>pair_id</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>pair_id__in</td>
+<td>query</td>
+<td>pair_id__in</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>pair_code</td>
+<td>query</td>
+<td>The resource&#39;s unique code</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>pair_code__in</td>
+<td>query</td>
+<td>pair_code__in</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>decorate</td>
+<td>query</td>
+<td>Decorations (computed fields) to be attached to the returned objects.</td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>A list of exchange pairs</td>
+</tr>
+</tbody></table>
+<h1 id='v1-exchange-pairs-id_or_code'>/V1/EXCHANGE-PAIRS/{ID_OR_CODE}</h1><h2 id='get-6'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Gets a exchange pair by id or code</p>
+<h3 id='http-request-11'>HTTP Request</h3>
+<p><code>***GET*** /v1/exchange-pairs/{id_or_code}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_or_code</td>
+<td>path</td>
+<td>id_or_code</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>The corresponding exchange pair</td>
+</tr>
+<tr>
+<td>404</td>
+<td>- No exchange pair was found for this id or code</td>
+</tr>
+</tbody></table>
+<h1 id='v1-pairs'>/V1/PAIRS</h1><h2 id='get-7'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Returns a list of pairs</p>
+<h3 id='http-request-12'>HTTP Request</h3>
+<p><code>***GET*** /v1/pairs</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>query</td>
+<td>The maximum amount of resources to be returned for this request.</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>offset</td>
+<td>query</td>
+<td>The amount of resources skipped for this request.</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>base_currency_id</td>
+<td>query</td>
+<td>base_currency_id</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>base_currency_id__in</td>
+<td>query</td>
+<td>base_currency_id__in</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>base_currency_code</td>
+<td>query</td>
+<td>The resource&#39;s unique code</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>base_currency_code__in</td>
+<td>query</td>
+<td>base_currency_code__in</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>quote_currency_id</td>
+<td>query</td>
+<td>quote_currency_id</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>quote_currency_id__in</td>
+<td>query</td>
+<td>quote_currency_id__in</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>quote_currency_code</td>
+<td>query</td>
+<td>The resource&#39;s unique code</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>quote_currency_code__in</td>
+<td>query</td>
+<td>quote_currency_code__in</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>id</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>id__in</td>
+<td>query</td>
+<td>id__in</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>code</td>
+<td>query</td>
+<td>The resource&#39;s unique code</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>code__in</td>
+<td>query</td>
+<td>code__in</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>decorate</td>
+<td>query</td>
+<td>Decorations (computed fields) to be attached to the returned objects.</td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>A list of pairs</td>
+</tr>
+</tbody></table>
+<h1 id='v1-pairs-id_or_code'>/V1/PAIRS/{ID_OR_CODE}</h1><h2 id='get-8'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Gets a pair by id</p>
+<h3 id='http-request-13'>HTTP Request</h3>
+<p><code>***GET*** /v1/pairs/{id_or_code}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_or_code</td>
+<td>path</td>
+<td>id_or_code</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>The corresponding pair</td>
+</tr>
+<tr>
+<td>404</td>
+<td>- No pair was found for this id or code</td>
+</tr>
+</tbody></table>
+<h1 id='v1-pairs-id_or_code-history'>/V1/PAIRS/{ID_OR_CODE}/HISTORY</h1><h2 id='get-9'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Return history data for True Price constituents</p>
+<h3 id='http-request-14'>HTTP Request</h3>
+<p><code>***GET*** /v1/pairs/{id_or_code}/history</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_or_code</td>
+<td>path</td>
+<td>id_or_code</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>from</td>
+<td>query</td>
+<td>Start date of Trie Price pairs historic data. Format is UTC+0 timestamp.</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>to</td>
+<td>query</td>
+<td>End date of True Price pairs historic data. Format is UTC+0 timestamp.</td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>A history data for True Price constituents</td>
+</tr>
+</tbody></table>
+<h1 id='v1-pairs-id_or_code-volume_ratio'>/V1/PAIRS/{ID_OR_CODE}/VOLUME_RATIO</h1><h2 id='get-10'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Return history daily rolling sum volume ratio for TruePrice pair</p>
+<h3 id='http-request-15'>HTTP Request</h3>
+<p><code>***GET*** /v1/pairs/{id_or_code}/volume_ratio</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_or_code</td>
+<td>path</td>
+<td>id_or_code</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>from</td>
+<td>query</td>
+<td>Start date of historic data. Format is UTC+0 timestamp.</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>to</td>
+<td>query</td>
+<td>End date of historic data. Format is UTC+0 timestamp.</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>time_frame</td>
+<td>query</td>
+<td>time_frame</td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>A  history daily rolling sum volume ratio for TruePrice pair</td>
+</tr>
+</tbody></table>
+<h1 id='v1-exchanges'>/V1/EXCHANGES</h1><h2 id='get-11'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Returns a list of exchanges</p>
+<h3 id='http-request-16'>HTTP Request</h3>
+<p><code>***GET*** /v1/exchanges</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>query</td>
+<td>The maximum amount of resources to be returned for this request.</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>offset</td>
+<td>query</td>
+<td>The amount of resources skipped for this request.</td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>A list of exchanges</td>
+</tr>
+</tbody></table>
+<h1 id='v1-exchanges-id_or_code'>/V1/EXCHANGES/{ID_OR_CODE}</h1><h2 id='get-12'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Gets an exchange by id or code</p>
+<h3 id='http-request-17'>HTTP Request</h3>
+<p><code>***GET*** /v1/exchanges/{id_or_code}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_or_code</td>
+<td>path</td>
+<td>id_or_code</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>The corresponding exchange</td>
+</tr>
+<tr>
+<td>404</td>
+<td>- No corresponding exchange found</td>
+</tr>
+</tbody></table>
+<h1 id='v1-currencies'>/V1/CURRENCIES</h1><h2 id='get-13'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Returns a list of currencies</p>
+<h3 id='http-request-18'>HTTP Request</h3>
+<p><code>***GET*** /v1/currencies</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>query</td>
+<td>The maximum amount of resources to be returned for this request.</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>offset</td>
+<td>query</td>
+<td>The amount of resources skipped for this request.</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>id</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>id__in</td>
+<td>query</td>
+<td>id__in</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>code</td>
+<td>query</td>
+<td>The resource&#39;s unique code</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>code__in</td>
+<td>query</td>
+<td>code__in</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>query</td>
+<td>type</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>type__in</td>
+<td>query</td>
+<td>type__in</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>quotable</td>
+<td>query</td>
+<td>Whether or not the currency can act act as a quote currency within. See the quote_currency_id property on pairs and indices.</td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>A list of currencies</td>
+</tr>
+</tbody></table>
+<h1 id='v1-currencies-id_or_code'>/V1/CURRENCIES/{ID_OR_CODE}</h1><h2 id='get-14'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Gets a currency by id or code</p>
+<h3 id='http-request-19'>HTTP Request</h3>
+<p><code>***GET*** /v1/currencies/{id_or_code}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_or_code</td>
+<td>path</td>
+<td>id_or_code</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>The corresponding currency</td>
+</tr>
+<tr>
+<td>404</td>
+<td>- No currency corresponds to this id or code</td>
+</tr>
+</tbody></table>
+<h1 id='v1-currencies-id_or_code-volume_ratio'>/V1/CURRENCIES/{ID_OR_CODE}/VOLUME_RATIO</h1><h2 id='get-15'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Return history daily rolling sum volume ratio for given currency</p>
+<h3 id='http-request-20'>HTTP Request</h3>
+<p><code>***GET*** /v1/currencies/{id_or_code}/volume_ratio</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_or_code</td>
+<td>path</td>
+<td>id_or_code</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>from</td>
+<td>query</td>
+<td>Start date of historic data. Format is UTC+0 timestamp.</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>to</td>
+<td>query</td>
+<td>End date of historic data. Format is UTC+0 timestamp.</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>time_frame</td>
+<td>query</td>
+<td>time_frame</td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>A  history daily rolling sum volume ratio for given currency</td>
+</tr>
+</tbody></table>
+<h1 id='v1-currencies-id_or_code-supplies'>/V1/CURRENCIES/{ID_OR_CODE}/SUPPLIES</h1><h2 id='get-16'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Return history monthly supply snapshots for given currency</p>
+<h3 id='http-request-21'>HTTP Request</h3>
+<p><code>***GET*** /v1/currencies/{id_or_code}/supplies</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_or_code</td>
+<td>path</td>
+<td>id_or_code</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>from</td>
+<td>query</td>
+<td>Start date of historic data. Format is UTC+0 timestamp.</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>to</td>
+<td>query</td>
+<td>End date of historic data. Format is UTC+0 timestamp.</td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>A history monthly supply snapshots for given currency</td>
+</tr>
+</tbody></table>
+<h1 id='v1-users'>/V1/USERS</h1><h2 id='get-17'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Returns a list of users</p>
+<h3 id='http-request-22'>HTTP Request</h3>
+<p><code>***GET*** /v1/users</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>query</td>
+<td>The maximum amount of resources to be returned for this request.</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>offset</td>
+<td>query</td>
+<td>The amount of resources skipped for this request.</td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>A list of users</td>
+</tr>
+</tbody></table>
+<h2 id='post-5'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Create a new user</p>
+<h3 id='http-request-23'>HTTP Request</h3>
+<p><code>***POST*** /v1/users</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>201</td>
+<td>The newly created index</td>
+</tr>
+</tbody></table>
+<h1 id='v1-users-current'>/V1/USERS/CURRENT</h1><h2 id='get-18'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get a current user by provided authorization data</p>
+<h3 id='http-request-24'>HTTP Request</h3>
+<p><code>***GET*** /v1/users/current</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>The current user</td>
+</tr>
+</tbody></table>
+<h1 id='v1-users-id_or_mail'>/V1/USERS/{ID_OR_MAIL}</h1><h2 id='get-19'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get a user by id or email</p>
+<h3 id='http-request-25'>HTTP Request</h3>
+<p><code>***GET*** /v1/users/{id_or_mail}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_or_code</td>
+<td>path</td>
+<td>id_or_code</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>The corresponding user</td>
+</tr>
+</tbody></table>
+<h1 id='v1-users-login'>/V1/USERS/LOGIN</h1><h2 id='post-6'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Verify user credentials and return user data with JWT token if credentials are valid</p>
+<h3 id='http-request-26'>HTTP Request</h3>
+<p><code>***POST*** /v1/users/login</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>The user data with JWT token</td>
+</tr>
+</tbody></table>
+<h1 id='v1-users-id'>/V1/USERS/{ID}</h1><h2 id='delete-2'><strong><em>DELETE</em></strong></h2>
+<p><strong>Summary:</strong> Delete existing user</p>
+<h3 id='http-request-27'>HTTP Request</h3>
+<p><code>***DELETE*** /v1/users/{id}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td>The resource&#39;s identifier</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>202</td>
+<td>Accepted when successfully deleted</td>
+</tr>
+</tbody></table>
+<h1 id='v1-users-id_or_mail-subscriptions'>/V1/USERS/{ID_OR_MAIL}/SUBSCRIPTIONS</h1><h2 id='get-20'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get email subscriptions for given user</p>
+<h3 id='http-request-28'>HTTP Request</h3>
+<p><code>***GET*** /v1/users/{id_or_mail}/subscriptions</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_or_code</td>
+<td>path</td>
+<td>id_or_code</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>A  email subscriptions for given user</td>
+</tr>
+</tbody></table>
+<h2 id='post-7'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Subscribe given user to receive TruePrice and composite indices email notifications</p>
+<h3 id='http-request-29'>HTTP Request</h3>
+<p><code>***POST*** /v1/users/{id_or_mail}/subscriptions</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_or_code</td>
+<td>path</td>
+<td>id_or_code</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>A  email subscriptions for given user</td>
+</tr>
+</tbody></table>
+<h2 id='delete-3'><strong><em>DELETE</em></strong></h2>
+<p><strong>Summary:</strong> Unsubscribe given user to receive TruePrice and composite indices email notifications</p>
+<h3 id='http-request-30'>HTTP Request</h3>
+<p><code>***DELETE*** /v1/users/{id_or_mail}/subscriptions</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_or_code</td>
+<td>path</td>
+<td>id_or_code</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>202</td>
+<td>Accepted when successfully unsubscribed</td>
+</tr>
+</tbody></table>
+<h1 id='v1-users-feedback'>/V1/USERS/FEEDBACK</h1><h2 id='post-8'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Send feedback message to MithrilX team</p>
+<h3 id='http-request-31'>HTTP Request</h3>
+<p><code>***POST*** /v1/users/feedback</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>202</td>
+<td>Accepted when message successfully sent</td>
+</tr>
+</tbody></table>
+<h1 id='v1-users-id_or_mail-newsletter'>/V1/USERS/{ID_OR_MAIL}/NEWSLETTER</h1><h2 id='post-9'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Subscribe user to MithrilX Newsletter</p>
+<h3 id='http-request-32'>HTTP Request</h3>
+<p><code>***POST*** /v1/users/{id_or_mail}/newsletter</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_or_code</td>
+<td>path</td>
+<td>id_or_code</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>202</td>
+<td>Accepted when user successfully subscribed</td>
+</tr>
+</tbody></table>
+
+<!-- Converted with the swagger-to-slate https://github.com/lavkumarv/swagger-to-slate -->
 <h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
+<aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside>
 
 <p>The Kittn API uses the following error codes:</p>
 
@@ -445,7 +2087,7 @@ Remember — a happy kitten is an authenticated kitten!
 </thead><tbody>
 <tr>
 <td>400</td>
-<td>Bad Request -- Your request sucks.</td>
+<td>Bad Request -- Your request is invalid.</td>
 </tr>
 <tr>
 <td>401</td>
@@ -493,9 +2135,6 @@ Remember — a happy kitten is an authenticated kitten!
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
     </div>
