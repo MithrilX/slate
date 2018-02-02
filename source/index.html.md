@@ -27,13 +27,16 @@ headingLevel: 2
 ## REST API
 
 
-This documentation presents the general guidelines followed when designing this API. For specific information about a particular endpoint, please refer to the endpoint's documentation itself.
+Welcome to the API reference for the MithrilX REST API! It’s great to have you here.
+
+
+Please consider the following guidlines when using it. For specific information about particular endpoints, please refer the the endpoint's documentation itself. 
 
 
 ### Authentication
 
 
-Endpoints are all public for now.
+At this time, all endpoints are public.
 
 
 ### Headers
@@ -74,33 +77,36 @@ Most endpoints require the `Content-Type` and `Accept` headers to be set to `app
 ### Keywords
 
 
-The API makes use of a few keyword, to be used in the query string parameters
-- `limit`: For GET / requests, allows you to control how many objects are being returned
-- `offset`: For GET / requests, allows use to skip objects from the research
-- `decorate`: Is an array of computed properties which you wish to see included for each object. For performance reasons, those computed are not returned by default
-- `expand`: NOT AVAILABLE YET
+The API uses a keywords which can be passed as query string parameters:
+
+
+- `limit`: For GET / requests, limits the number of returned objects 
+- `offset`: For GET / requests, skips returned objects
+- `decorate`: For GET / requests, returns an array of properties that can be specified for each object. For performance reasons, this feature is turned off by default.
 
 
 ### Filters & Operators
 
 
-GET / requests might expose a number of filters in order to refine the search you're making.
+GET / requests often offer filters that allow you to refine your search.
 
 
-Additionally, some of those filters might also support operators. Operators are a convenient way to fine tune your query and are appended to the property name using `__`.
+Some of filters additionally support operators. Operators let are appended to the property name by using ___.
 
 
-Existing operators:
+Available operators:
+
+
 - `in`: Similar to SQL's IN clause
 - `nin`: Similar to SQL's NOT IN clause
 - `ne`: Different than
-- `gt`: Greater than
-- `gte`: Greater than equal
-- `lt`: Lower than
-- `lte`: Lower than equal
+- `gt`: Greate than
+- `gte`: Greate than or equal
+- `lt`: Less than
+- `lte`: Less than equal
 
 
-Example filter coupled with an operator : `type__in`
+Example of a filter combined with an operator : `type__in`
 
 
 ## WebSockets Feed
@@ -109,14 +115,13 @@ Example filter coupled with an operator : `type__in`
 ### Subscribing/Unsubscribing
 
 
-Subscribing is done by sending a `subscribe` event and unsubscribing is done by sending an `unsubscribe` event. Both payloads follow the same format.
+Subscribe by sending a `subscribe` event and unsubscribe by sending an `unsubscribe` event. Both events use the same format. 
 
 
 You can choose to subscribe to *indices*, *pairs* or *exchange pairs* changes. Currently only the `ticker` channel is available.
 
 
-#### Example:
-```javascript
+```
 socket.send({
   "type": "subscribe",
   "index_ids": [1, 2],
@@ -204,7 +209,7 @@ This event is triggered for each change on a exchange pair.
 #### `error`
 
 
-Error can occur if you send a wrong subscription for example.
+An error occurs if an invalid request is made.
 
 
 ```
