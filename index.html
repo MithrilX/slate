@@ -322,9 +322,11 @@
 <p>Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.</p>
 </blockquote>
 <h2 id='rest-api'>REST API</h2>
-<p>This documentation presents the general guidelines followed when designing this API. For specific information about a particular endpoint, please refer to the endpoint&#39;s documentation itself.</p>
+<p>Welcome to the API reference for the MithrilX REST API! It’s great to have you here.</p>
+
+<p>Please consider the following guidlines when using it. For specific information about particular endpoints, please refer the the endpoint&#39;s documentation itself. </p>
 <h3 id='authentication'>Authentication</h3>
-<p>Endpoints are all public for now.</p>
+<p>At this time, all endpoints are public.</p>
 <h3 id='headers'>Headers</h3>
 <p>Most endpoints require the <code>Content-Type</code> and <code>Accept</code> headers to be set to <code>application/json</code>.</p>
 <h3 id='response-formats'>Response formats</h3><h4 id='post-requests'>POST requests</h4>
@@ -357,37 +359,42 @@
 <li><code>meta</code>: Various information about the error, including a JSON <code>schema</code> property if a payload was the cause of the error</li>
 </ul>
 <h3 id='keywords'>Keywords</h3>
-<p>The API makes use of a few keyword, to be used in the query string parameters
-- <code>limit</code>: For GET / requests, allows you to control how many objects are being returned
-- <code>offset</code>: For GET / requests, allows use to skip objects from the research
-- <code>decorate</code>: Is an array of computed properties which you wish to see included for each object. For performance reasons, those computed are not returned by default
-- <code>expand</code>: NOT AVAILABLE YET</p>
+<p>The API uses a keywords which can be passed as query string parameters:</p>
+
+<ul>
+<li><code>limit</code>: For GET / requests, limits the number of returned objects </li>
+<li><code>offset</code>: For GET / requests, skips returned objects</li>
+<li><code>decorate</code>: For GET / requests, returns an array of properties that can be specified for each object. For performance reasons, this feature is turned off by default.</li>
+</ul>
 <h3 id='filters-amp-operators'>Filters &amp; Operators</h3>
-<p>GET / requests might expose a number of filters in order to refine the search you&#39;re making.</p>
+<p>GET / requests often offer filters that allow you to refine your search.</p>
 
-<p>Additionally, some of those filters might also support operators. Operators are a convenient way to fine tune your query and are appended to the property name using <code>__</code>.</p>
+<p>Some of filters additionally support operators. Operators let are appended to the property name by using ___.</p>
 
-<p>Existing operators:
-- <code>in</code>: Similar to SQL&#39;s IN clause
-- <code>nin</code>: Similar to SQL&#39;s NOT IN clause
-- <code>ne</code>: Different than
-- <code>gt</code>: Greater than
-- <code>gte</code>: Greater than equal
-- <code>lt</code>: Lower than
-- <code>lte</code>: Lower than equal</p>
+<p>Available operators:</p>
 
-<p>Example filter coupled with an operator : <code>type__in</code></p>
+<ul>
+<li><code>in</code>: Similar to SQL&#39;s IN clause</li>
+<li><code>nin</code>: Similar to SQL&#39;s NOT IN clause</li>
+<li><code>ne</code>: Different than</li>
+<li><code>gt</code>: Greate than</li>
+<li><code>gte</code>: Greate than or equal</li>
+<li><code>lt</code>: Less than</li>
+<li><code>lte</code>: Less than equal</li>
+</ul>
+
+<p>Example of a filter combined with an operator : <code>type__in</code></p>
 <h2 id='websockets-feed'>WebSockets Feed</h2><h3 id='subscribing-unsubscribing'>Subscribing/Unsubscribing</h3>
-<p>Subscribing is done by sending a <code>subscribe</code> event and unsubscribing is done by sending an <code>unsubscribe</code> event. Both payloads follow the same format.</p>
+<p>Subscribe by sending a <code>subscribe</code> event and unsubscribe by sending an <code>unsubscribe</code> event. Both events use the same format. </p>
 
 <p>You can choose to subscribe to <em>indices</em>, <em>pairs</em> or <em>exchange pairs</em> changes. Currently only the <code>ticker</code> channel is available.</p>
-<h4 id='example'>Example:</h4><pre class="highlight javascript tab-javascript"><code><span class="nx">socket</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
-  <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"subscribe"</span><span class="p">,</span>
-  <span class="s2">"index_ids"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
-  <span class="s2">"pair_ids"</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-  <span class="s2">"exchange_pair_ids"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-  <span class="s2">"channels"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"ticker"</span><span class="p">]</span>
-<span class="p">})</span>
+<pre class="highlight plaintext"><code>socket.send({
+  "type": "subscribe",
+  "index_ids": [1, 2],
+  "pair_ids": [2, 3],
+  "exchange_pair_ids": [1, 5],
+  "channels": ["ticker"]
+})
 </code></pre><h3 id='events'>Events</h3><h4 id='ticker-index'><code>ticker:index</code></h4>
 <p>This event is triggered for each change on an index.</p>
 <pre class="highlight plaintext"><code>{
@@ -436,7 +443,7 @@
   }
 }
 </code></pre><h4 id='error'><code>error</code></h4>
-<p>Error can occur if you send a wrong subscription for example.</p>
+<p>An error occurs if an invalid request is made.</p>
 <pre class="highlight plaintext"><code>{
   "type": "error",
   "message": "Something went wrong."
