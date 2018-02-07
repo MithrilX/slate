@@ -82,7 +82,7 @@ The API uses a keywords which can be passed as query string parameters:
 
 - `limit`: For GET / requests, limits the number of returned objects 
 - `offset`: For GET / requests, skips returned objects
-- `decorate`: For GET / requests, returns an array of properties that can be specified for each object. For performance reasons, this feature is turned off by default.
+- `decorate`: For GET / requests, an array of computed properties which you wish to see included for each object. For performance reasons, those computed properties are not returned by default.
 
 
 ### Filters & Operators
@@ -100,13 +100,19 @@ Available operators:
 - `in`: Similar to SQL's IN clause
 - `nin`: Similar to SQL's NOT IN clause
 - `ne`: Different than
-- `gt`: Greate than
-- `gte`: Greate than or equal
+- `gt`: Greater than
+- `gte`: Greater than or equal
 - `lt`: Less than
 - `lte`: Less than equal
 
 
 Example of a filter combined with an operator : `type__in`
+
+
+### Rate Limits
+
+
+Please limit requests to no more than 60 per minute. When a rate limit is exceeded, a status of **429 Too Many Requests** will be returned.
 
 
 ## WebSockets Feed
@@ -3255,6 +3261,7 @@ System.out.println(response.toString());
       "supply": "string",
       "total_supply": "string",
       "max_supply": "string",
+      "last_24h_volume": "string",
       "last_24h_volume_usd": "string",
       "symbol": "string",
       "mineable": true,
@@ -3297,6 +3304,7 @@ Status Code **200**
 |»» supply|string|true|The circulating supply, total amount of coins available for this currency.|
 |»» total_supply|string|false|The total supply for this currency (not null only if total supply not equals circulating supply).|
 |»» max_supply|string|false|The maximum reachable supply for this currency.|
+|»» last_24h_volume|string|false|The latest 24h volume.|
 |»» last_24h_volume_usd|string|false|The latest 24h USD volume.|
 |»» symbol|string|true|Unique, graphic symbol commonly used for this currency. Not always available.|
 |»» mineable|boolean|true|Whether the currency is mineable or not.|
@@ -3475,6 +3483,7 @@ System.out.println(response.toString());
     "supply": "string",
     "total_supply": "string",
     "max_supply": "string",
+    "last_24h_volume": "string",
     "last_24h_volume_usd": "string",
     "symbol": "string",
     "mineable": true,
@@ -3520,6 +3529,7 @@ Status Code **200**
 |»» supply|string|false|The circulating supply, total amount of coins available for this currency.|
 |»» total_supply|string|false|The total supply for this currency (not null only if total supply not equals circulating supply).|
 |»» max_supply|string|false|The maximum reachable supply for this currency.|
+|»» last_24h_volume|string|false|The latest 24h volume.|
 |»» last_24h_volume_usd|string|false|The latest 24h USD volume.|
 |»» symbol|string|false|Unique, graphic symbol commonly used for this currency. Not always available.|
 |»» mineable|boolean|false|Whether the currency is mineable or not.|
