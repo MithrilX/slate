@@ -364,7 +364,7 @@
 <ul>
 <li><code>limit</code>: For GET / requests, limits the number of returned objects </li>
 <li><code>offset</code>: For GET / requests, skips returned objects</li>
-<li><code>decorate</code>: For GET / requests, returns an array of properties that can be specified for each object. For performance reasons, this feature is turned off by default.</li>
+<li><code>decorate</code>: For GET / requests, an array of computed properties which you wish to see included for each object. For performance reasons, those computed properties are not returned by default.</li>
 </ul>
 <h3 id='filters-amp-operators'>Filters &amp; Operators</h3>
 <p>GET / requests often offer filters that allow you to refine your search.</p>
@@ -377,13 +377,15 @@
 <li><code>in</code>: Similar to SQL&#39;s IN clause</li>
 <li><code>nin</code>: Similar to SQL&#39;s NOT IN clause</li>
 <li><code>ne</code>: Different than</li>
-<li><code>gt</code>: Greate than</li>
-<li><code>gte</code>: Greate than or equal</li>
+<li><code>gt</code>: Greater than</li>
+<li><code>gte</code>: Greater than or equal</li>
 <li><code>lt</code>: Less than</li>
 <li><code>lte</code>: Less than equal</li>
 </ul>
 
 <p>Example of a filter combined with an operator : <code>type__in</code></p>
+<h3 id='rate-limits'>Rate Limits</h3>
+<p>Please limit requests to no more than 60 per minute. When a rate limit is exceeded, a status of <strong>429 Too Many Requests</strong> will be returned.</p>
 <h2 id='websockets-feed'>WebSockets Feed</h2><h3 id='subscribing-unsubscribing'>Subscribing/Unsubscribing</h3>
 <p>Subscribe by sending a <code>subscribe</code> event and unsubscribe by sending an <code>unsubscribe</code> event. Both events use the same format. </p>
 
@@ -4757,6 +4759,7 @@ Accept: application/json
       </span><span class="s2">"supply"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"total_supply"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"max_supply"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"last_24h_volume"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"last_24h_volume_usd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"mineable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
@@ -4890,6 +4893,12 @@ Accept: application/json
 <td>string</td>
 <td>false</td>
 <td>The maximum reachable supply for this currency.</td>
+</tr>
+<tr>
+<td>»» last_24h_volume</td>
+<td>string</td>
+<td>false</td>
+<td>The latest 24h volume.</td>
 </tr>
 <tr>
 <td>»» last_24h_volume_usd</td>
@@ -5067,6 +5076,7 @@ Accept: application/json
     </span><span class="s2">"supply"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"total_supply"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"max_supply"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_24h_volume"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"last_24h_volume_usd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"mineable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
@@ -5186,6 +5196,12 @@ Accept: application/json
 <td>string</td>
 <td>false</td>
 <td>The maximum reachable supply for this currency.</td>
+</tr>
+<tr>
+<td>»» last_24h_volume</td>
+<td>string</td>
+<td>false</td>
+<td>The latest 24h volume.</td>
 </tr>
 <tr>
 <td>»» last_24h_volume_usd</td>
